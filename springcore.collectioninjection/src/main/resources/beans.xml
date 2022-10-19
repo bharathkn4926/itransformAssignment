@@ -1,0 +1,39 @@
+<beans 
+xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+  
+   
+   <bean id="Question" class="springcore.collectioninjection.Question">
+     <property name="questionId" value="001"></property>
+     <property name="question" value="What is java"></property>
+     <property name="listanswers">
+     <list>
+     <value>JAVA IS A OBJECT ORIENTED PROGRAMMING LANGUAGE</value>
+     <value>Developed by James </value>
+     </list>
+     </property>
+     
+     <property name="setanswers">
+     <set>
+     <value>JAVA IS A OBJECT ORIENTED PROGRAMMING LANGUAGE</value>
+     <value>Developed by James </value>
+     </set>
+     </property>
+     
+     <property name="mapanswers">
+     <map>
+     <entry key="1"><value>JAVA IS A OBJECT ORIENTED PROGRAMMING LANGUAGE</value></entry>
+     <entry key="2"><value>Developed by James</value></entry>
+     
+     </map>
+     </property>
+    </bean>
+     
+    
+   
+</beans>
