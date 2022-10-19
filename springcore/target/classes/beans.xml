@@ -1,0 +1,30 @@
+<beans 
+
+ xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+    <bean id="Customer" class="springcore.Customer">
+    <!-- Setter injection -->
+     <property name="customerId" value="101"></property>
+    <property name="customerName" value="Bharath"></property>
+    <property name="customerContact" value="7406245625"></property>
+    <property name="customerAddress" ref="Address"></property>    
+    <!-- Constructor injection 
+    <constructor-arg value="102"></constructor-arg>
+    <constructor-arg value="Anu"></constructor-arg>
+    <constructor-arg value="9380148374"></constructor-arg>
+    <constructor-arg ref="Address"></constructor-arg>  -->   
+    </bean>
+   
+    <bean id="Address" class="springcore.Address">
+    <property name="street" value="BH road"></property>
+    <property name="city" value="Tumkur"></property>
+    <property name="state" value="Karnataka"></property>
+    <property name="zipcode" value="572102"></property>
+    <property name="country" value="India"></property>  
+   </bean>
+   
+</beans>
